@@ -24,7 +24,7 @@ class Intro extends StatelessWidget {
               alignment: Alignment.center,
               padding: EdgeInsets.all(10),
               child: Text(
-                'Mi Vivienda',
+                'Llamita Vivienda',
                 style: TextStyle(fontSize: 20),
               ),
             ),
@@ -42,7 +42,7 @@ class Intro extends StatelessWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return const CreditsData();
+                        return const Login();
                       },
                     ),
                   );
@@ -55,13 +55,13 @@ class Intro extends StatelessWidget {
               child: ElevatedButton(
                 child: const Text('Registrarse'),
                 onPressed: () {
-                  //Navigator.of(context).push(
-                    //MaterialPageRoute(
-                      //builder: (BuildContext context) {
-                        //return const Register();
-                      //},
-                    //),
-                  //);
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const Register();
+                      },
+                    ),
+                  );
                 },
               ),
             )

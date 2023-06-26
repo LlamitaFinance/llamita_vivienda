@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:llamita_vivienda/screens/customer_data.dart';
 //import 'package:llamita_vivienda/screens/customers_list.dart';
+import 'package:llamita_vivienda/screens/credits_data.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -57,13 +59,13 @@ class _RegisterState extends State<Register> {
               child: ElevatedButton(
                 child: const Text('Crear cuenta'),
                 onPressed: () {
-                  //Navigator.of(context).push(
-                  //MaterialPageRoute(
-                  //builder: (BuildContext context) {
-                  //return const CustomerList();
-                  //},
-                  //),
-                  //);
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const CustomerData();
+                      },
+                    ),
+                  );
                 },
               ),
             )

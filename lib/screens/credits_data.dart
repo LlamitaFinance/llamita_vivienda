@@ -22,7 +22,6 @@ class _CreditsDataState extends State<CreditsData> {
   var Co;
   var i;
   var n;
-  List mk = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,14 +101,6 @@ class _CreditsDataState extends State<CreditsData> {
                   //),
                   //);
                 },
-              ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(10),
-              child: Text(
-                'Datos de préstamo',
-                style: TextStyle(fontSize: 20),
               ),
             ),
           ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:llamita_vivienda/screens/payments_list.dart';
+import 'package:llamita_vivienda/screens/credits_data.dart';
 
 class CustomerData extends StatefulWidget {
   const CustomerData({super.key});
@@ -76,6 +77,22 @@ class _CustomerDataState extends State<CustomerData> {
                 ),
               ),
             ),
+            Container(
+              height: 50,
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              child: ElevatedButton(
+                child: const Text('Guardar datos'),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const CreditsData();
+                      },
+                    ),
+                  );
+                },
+              ),
+            )
           ],
         ),
       ),

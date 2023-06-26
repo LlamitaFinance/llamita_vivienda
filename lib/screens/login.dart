@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:llamita_vivienda/screens/customers_list.dart';
+import 'package:llamita_vivienda/screens/customer_data.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -61,13 +62,13 @@ class _LoginState extends State<Login> {
               child: ElevatedButton(
                 child: const Text('Iniciar sesión'),
                 onPressed: () {
-                  //Navigator.of(context).push(
-                    //MaterialPageRoute(
-                      //builder: (BuildContext context) {
-                        //return const CustomerList();
-                      //},
-                    //),
-                  //);
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const CustomerData();
+                      },
+                    ),
+                  );
                 },
               ),
             )

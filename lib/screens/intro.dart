@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:llamita_vivienda/screens/login.dart';
+import 'package:llamita_vivienda/screens/register.dart';
 
 class Intro extends StatelessWidget {
 
@@ -54,7 +55,7 @@ class Intro extends StatelessWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return const Login();
+                        return const Register();
                       },
                     ),
                   );

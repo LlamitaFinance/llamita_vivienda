@@ -13,6 +13,8 @@ class _CustomerDataState extends State<CustomerData> {
 
   @override
   Widget build(BuildContext context) {
+
+    var total;
     return Scaffold(
       appBar: AppBar(
         title: Text('Llamita Vivienda'),

@@ -9,17 +9,10 @@ class CreditsData extends StatefulWidget {
 }
 
 class _CreditsDataState extends State<CreditsData> {
-  TextEditingController nominalValue = TextEditingController();
-  TextEditingController couponRate = TextEditingController();
-  TextEditingController paymentDeadline = TextEditingController();
-  TextEditingController couponPayment = TextEditingController();
-  TextEditingController couponDeadline = TextEditingController();
-  TextEditingController partialGraceDeadline = TextEditingController();
-  TextEditingController structurationCost = TextEditingController();
-  TextEditingController placementCost = TextEditingController();
-  TextEditingController floatingCost = TextEditingController();
-  TextEditingController cavali = TextEditingController();
-  TextEditingController deadlineCost = TextEditingController();
+  TextEditingController amountController = TextEditingController();
+  TextEditingController currencyController = TextEditingController();
+  TextEditingController rateController = TextEditingController();
+  TextEditingController nPeriods = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -35,94 +28,83 @@ class _CreditsDataState extends State<CreditsData> {
               alignment: Alignment.center,
               padding: EdgeInsets.all(10),
               child: Text(
-                'Valor Nominal',
+                'Datos de préstamo',
                 style: TextStyle(fontSize: 20),
               ),
             ),
             Container(
               padding: EdgeInsets.all(10),
               child: TextField(
+                controller: amountController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Tasa cupón',
+                  labelText: 'Monto',
                 ),
               ),
             ),
             Container(
               padding: EdgeInsets.all(10),
               child: TextField(
+                controller: rateController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Plazo de pago',
+                  labelText: 'Tasa Efectiva Anual',
                 ),
               ),
             ),
             Container(
               padding: EdgeInsets.all(10),
               child: TextField(
+                controller: currencyController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Pago del cupón',
+                  labelText: 'Divisa',
                 ),
               ),
             ),
             Container(
               padding: EdgeInsets.all(10),
               child: TextField(
+                controller: nPeriods,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Plazo de gracia parcial',
+                  labelText: 'Número de periodos',
                 ),
               ),
             ),
             Container(
-              padding: EdgeInsets.all(10),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Costo de estructuración',
-                ),
+              height: 50,
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              child: ElevatedButton(
+                child: const Text('Definir'),
+                onPressed: () {
+                  if (currencyController == "Soles" || currencyController == "Dolares" || currencyController == "Dólares"
+                  || currencyController == "soles" || currencyController == "dolares" || currencyController == "dólares")
+                    {
+                      if (defineAmounts() == true){
+
+                      }
+                    }
+                  //Navigator.of(context).push(
+                  //MaterialPageRoute(
+                  //builder: (BuildContext context) {
+                  //return const CustomerList();
+                  //},
+                  //),
+                  //);
+                },
               ),
-            ),
-            Container(
-              padding: EdgeInsets.all(10),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Costo de colocación',
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.all(10),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Costo de flotación',
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.all(10),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'CAVALI',
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.all(10),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Prima al vencimiento',
-                ),
-              ),
-            ),
+            )
           ],
         ),
       ),
     );
+  }
+  defineAmounts() async {
+    var amount = amountController;
+    var rate = rateController;
+    String currency = currencyController.toString();
+
+    return true;
   }
 }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:llamita_vivienda/screens/customer_data.dart';
 import 'package:llamita_vivienda/screens/login.dart';
 import 'package:llamita_vivienda/screens/register.dart';
+//import 'package:llamita_vivienda/screens/customer_data.dart';
+import 'package:llamita_vivienda/screens/credits_data.dart';
 
 class Intro extends StatelessWidget {
 
@@ -39,7 +42,7 @@ class Intro extends StatelessWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return const Login();
+                        return const CreditsData();
                       },
                     ),
                   );
@@ -52,13 +55,13 @@ class Intro extends StatelessWidget {
               child: ElevatedButton(
                 child: const Text('Registrarse'),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (BuildContext context) {
-                        return const Register();
-                      },
-                    ),
-                  );
+                  //Navigator.of(context).push(
+                    //MaterialPageRoute(
+                      //builder: (BuildContext context) {
+                        //return const Register();
+                      //},
+                    //),
+                  //);
                 },
               ),
             )

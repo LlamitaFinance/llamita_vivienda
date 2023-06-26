@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:llamita_vivienda/screens/payments_list.dart';
+//import 'package:llamita_vivienda/screens/customers_list.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -64,7 +64,7 @@ class _LoginState extends State<Login> {
                   //Navigator.of(context).push(
                     //MaterialPageRoute(
                       //builder: (BuildContext context) {
-                        //return const VeterinarianList();
+                        //return const CustomerList();
                       //},
                     //),
                   //);

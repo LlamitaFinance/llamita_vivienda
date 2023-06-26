@@ -25,8 +25,17 @@ class _CustomerDataState extends State<CustomerData> {
               alignment: Alignment.center,
               padding: EdgeInsets.all(10),
               child: Text(
-                'Nombres',
+                'Datos del cliente',
                 style: TextStyle(fontSize: 20),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Nombres',
+                ),
               ),
             ),
             Container(

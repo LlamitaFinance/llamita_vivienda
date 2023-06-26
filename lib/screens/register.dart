@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:llamita_vivienda/screens/payments_list.dart';
+//import 'package:llamita_vivienda/screens/customers_list.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -60,7 +60,7 @@ class _RegisterState extends State<Register> {
                   //Navigator.of(context).push(
                   //MaterialPageRoute(
                   //builder: (BuildContext context) {
-                  //return const VeterinarianList();
+                  //return const CustomerList();
                   //},
                   //),
                   //);
